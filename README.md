@@ -71,6 +71,7 @@ An exhilarating typing game that challenges your speed, accuracy, and focus. Div
 
 - Built using **p5.js**, a JavaScript library for creative coding.
 - **No Installation Required**: Just open the game in any modern browser.
+- Access game here : 
 
 ---
 
