@@ -1,12 +1,15 @@
 let state = "menu"; // Possible states: 'menu', 'basketball', 'fruit', 'racer'
 
+
 function setup() {
-  createCanvas(800, 800); // Everything is 800 by 800
+  createCanvas(windowWidth, windowHeight); // Everything is 800 by 800
   textAlign(CENTER, CENTER);
 }
 
+
 function draw() {
   background(0);
+
 
   if (state === "menu") {
     showMenu();
@@ -19,15 +22,18 @@ function draw() {
   }
 }
 
+
 function showMenu() {
   fill(255);
   textSize(32);
   text("Main Menu", width / 2, height / 4);
 
+
   textSize(24);
   text("Press 1 for Basketball", width / 2, height / 2 - 40);
   text("Press 2 for Fruit", width / 2, height / 2);
   text("Press 3 for Racer", width / 2, height / 2 + 40);
+
 
   textSize(18);
   text(
@@ -36,6 +42,7 @@ function showMenu() {
     height - 40
   );
 }
+
 
 function keyPressed() {
   if (state === "menu") {
@@ -65,6 +72,7 @@ function keyPressed() {
   }
 }
 
+
 function keyReleased() {
   if (state === "fruit") {
     fruitKeyReleased(key, keyCode);
@@ -74,4 +82,6 @@ function keyReleased() {
 }
 
 
-
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
